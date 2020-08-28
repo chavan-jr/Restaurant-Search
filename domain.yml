@@ -1,0 +1,83 @@
+actions:
+- action_search_restaurants
+- action_send_email
+#- action_validate_location
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_ask_budget
+- utter_ask_email_id
+- utter_ask_top_10_restaurants
+
+
+entities:
+- cuisine
+- location
+- budget
+- email_id
+#- validate_location
+intents:
+- goodbye
+- restaurant_search
+- greet
+- affirm
+- stop
+responses:
+  utter_ask_top_10_restaurants:
+    text: Would you like me to email the top 10 restaurants with your preferences?
+  utter_ask_budget:
+  - buttons:
+    - payload: Lesser than Rs. 300
+      title: Lesser than Rs.300
+    - payload: Rs. 300 to 700
+      title: Rs. 300 to 700
+    - payload: More than 700
+      title: More than 700
+    text: what is the budget for two people?
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Mexican
+      title: Mexican
+    - payload: Italian
+      title: Italian
+    - payload: American
+      title: American
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: what kind of cuisine would you like?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  utter_default:
+  - text: i cannot understand
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_ask_email_id:
+  - text: Please provide your email address
+
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
+slots:
+  cuisine:
+    type: text
+  location:
+    type: text
+  email_id:
+    type: text
+  budget:
+    type: text
+
