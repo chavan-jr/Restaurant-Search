@@ -16,9 +16,9 @@ class ActionSearchRestaurants(Action):
     # tier_1_2_cities = []
     # location = tracker.get_slot('location')
     # return location in tier_1_2_cities
-    def restaurants_based_on_budget(self, budget, d, n):b
-        if email
-        return 0
+    #def restaurants_based_on_budget(self, budget, d, n):b
+        #if email
+        #return 0
 
     def run(self, dispatcher, tracker, domain):
         config = {"user_key": "f4924dc9ad672ee8c4f8c84743301af5"}
